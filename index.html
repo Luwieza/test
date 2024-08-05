@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--head with wrapped link harer-->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <title>Azania</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4GB3CyeY6wYHN3yt9pW0XpsrriVlkMXe40PTKnXeLnZ9+fkDog==" crossorigin="anonymous" />
+  
+  <style>
+        
+        .carousel-border {
+            border: 5px solid white; /* White border */
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Prevents overflow */
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel-inner {
+            border: 5px solid white; /* White border */
+            border-radius: 2px; /* Rounded corners */
+            overflow: hidden; /* Prevents overflow */
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: auto; /* Ensures images scale properly */
+        }
+
+        /* Map*/
+        bg-pale-cyan {
+            background-color: #cff4fc; /* Pale cyan color */
+        }
+        /* Set the height for the map */
+        #map {
+            height: 400px; /* Adjust height as needed */
+            width: 100%; /* Full width */
+            border: #cff4fc;
+        }
+
+       
+        .bg-pale-cyan {
+            background-color: #cff4fc; /* Pale cyan color */
+        }
+
+        .alert-message {
+            background-color: #cff4fc;; /* Light red background */
+            color: #721c24; /* Dark red text */
+            padding: 10px;
+            margin: 20px 0;
+            font-weight: bold;
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        .sliding-text {
+            display: inline-block; /* Allows the transform to affect only this element */
+            animation: slide-left 3s ease-in-out infinite; /* Animation properties */
+        }
+
+        @keyframes slide-left {
+            0% {
+                transform: translateX(100%); /* Start off-screen right */
+            }
+            50% {
+                transform: translateX(0); /* Land in the center */
+            }
+            100% {
+                transform: translateX(-100%); /* Move off-screen left */
+            }
+        } 
+        
+        @keyframes flicker {
+            0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    20% {
+        opacity: 0.8; /* Slightly transparent */
+    }
+    40% {
+        opacity: 0; /* Fully transparent */
+    }
+    60% {
+        opacity: 0.8; /* Slightly transparent again */
+    }
+    80% {
+        opacity: 1; /* Back to fully visible */
+    }
+} 
+
+  
+   
+
+    </style>
+  
+  </head>
+<!--End of head harer-->
+ 
+<!--Body tag harer-->
+  <body>
+
+<!--Container class harer--
+    <div class="container">
+--->
+<!--tilting bar class harer--
+      <div class="circle-container">
+        <div class="circle">
+         <botton id="close">
+         <i class="fas fa-bar-times"></i>
+           </bottton>
+             </botton id="open">
+             <i class="fas fa-bars"></i>
+           </botton>
+          </div>
+        </div> 
+
+<!-header harer-->
+      <header>
+        <nav class="navbar" style="background-color: #cff4fc">
+          <a class="container-fluid">
+            
+          <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" alt="Logo" width="150" height="55" class="d-inline-block align-text-top">
+      
+    </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="About.html"
+                  >About</a>
+              <li class="nav-item">
+                <a class="nav-link active" href="Menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Order.html">Order Online</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Book a Table
+                </a>
+                <div>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="Table.html">Reserve a Table</a></li>
+                    <li>
+                      <a class="dropdown-item" href="Special deas.html">Special deals</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="Contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+  </header>
+<!--End of header harer-->
+
+<!--Menu hare-->
+  <div class="menu">
+    
+    <div class="row">
+      <div class="text-center">
+           <h1>Our Menu</h1>
+           <div class="alert-message">
+              <span class="sliding-text"><i>Our restaurant will be closed on Sunday!</i></span>
+           </div>
+       <!----  <div class="alert alert-info" role="alert">
+              <i class="alert-messange">Our resturaunt will be closed on Sunday!</i>
+         </div>
+--> 
+        </div>
+      </div>
+<!--End of menu harer-->
+
+<!--Welcome sesction hare-->
+ <div class="Vertical col" style="width: 18rem;">
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3" style="background-color: #cff4fc; border: 1px solid #000;">
+                    <h2>Welcome To Our Resturaunt</h2>
+                    <p>You'll discover mouthwatering dishes like our signature herb crusted salmon, served with a zesty lemon-dill sauce, and our decadent chocolate lava cake, perfect for satisfying your sweet tooth.</p>
+                    <p>Join us for virtual tours of our cozy ambiance, read customer testimonials that highlight our exceptional service, and book a table effortlessly through our user friendly reservation system.</p>
+                    <p>Dive into our blog for fun recipes and food pairing tips to bring the flavors of Savory Seasons into your home.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ <br>
+
+       <!-- Image Carousel -->
+        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/stake.png" class="d-block w-100" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/blackBusiness.png" class="d-block w-100" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/bugger-with-fry.png" class="d-block w-100" alt="Third slide">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+   <br>
+
+      <!-- Testimonials Section 
+        <div class="container mt-5">
+            <h2 class="text-center">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="card-text">"The best dining experience I’ve ever had!"</p>
+                            <h5 class="card-title">- Jane Doe</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="card-text">"Amazing food and great service!"</p>
+                            <h5 class="card-title">- John Smith</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="card-text">"I loved the ambiance and the food!"</p>
+                            <h5 class="card-title">- Emily Johnson</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+-->
+ <!---Card-->
+<div class="row bg-aqua">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <img src="images/spaget.png" class="card-img-top" alt="Dish 1">
+            <div class="card-body" style="background-color: #cff4fc;">
+                <h5 class="card-title">Spaghetti Carbonara</h5>
+                <p class="card-text">Creamy pasta with crispy pancetta.</p>
+                <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <img src="images/screenshot 2024-08-04 at 22.56.01.png" class="card-img-top" alt="Dish 2">
+            <div class="card-body" style="background-color: #cff4fc;">
+                <h5 class="card-title">Caesar Salad</h5>
+                <p class="card-text">Fresh romaine with Caesar dressing.</p>
+                <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <img src="images/cake.png" class="card-img-top" alt="Dish 3">
+            <div class="card-body" style="background-color: #cff4fc;">
+                <h5 class="card-title">Chocolate Lava Cake</h5>
+                <p class="card-text">Rich chocolate cake with a molten center.</p>
+                <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!--Fourth card-->
+        
+      <div class="oline">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-center">
+              <button type="button" class="btn btn-primary">
+                Order Online
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="bootstrap.bundle.min.js"></script>
+
+      <br>
+    </div>
+
+       <!-- Call to Action Section -->
+  <div class="container-z bg-pale-cyan text-center p-5" style="background-color: #cff4fc;">  
+    <div class="bg-pale-cyan text-center p-5">
+      <h2>Ready to Taste the Best?</h2>
+       <p>Join us for a delightful dining experience.</p>
+       <a href="Reservation.html" class="btn btn-success btn-lg">Reserve Your Table</a>
+    </div>
+ </div> 
+<!-- ... existing code ... -->
+
+        <!-- Menu Cards with Hover Effects -->
+        <div class="row mt-5">
+            <!-- Your existing card content here -->
+        </div>
+
+        <!-- Tip Calculator Section -->
+        <div class="container mt-5">
+            <h2 class="text-center">Tip Calculator</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="tipCalculator" class="card p-4">
+                        <div class="mb-3">
+                            <label for="billAmount" class="form-label">Bill Amount ($)</label>
+                            <input type="number" class="form-control" id="billAmount" placeholder="Enter bill amount" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipPercentage" class="form-label">Tip Percentage (%)</label>
+                            <input type="number" class="form-control" id="tipPercentage" value="15" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Calculate Tip</button>
+                    </form>
+                    <div class="mt-3" id="tipResult" style="display: none;">
+                        <h4 class="text-center">Total Tip: $<span id="tipAmount"></span></h4>
+                        <h4 class="text-center">Total Amount: $<span id="totalAmount"></span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+    document.getElementById('tipCalculator').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const billAmount = parseFloat(document.getElementById('billAmount').value);
+        const tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
+
+        const tipAmount = (billAmount * tipPercentage) / 100;
+        const totalAmount = billAmount + tipAmount;
+
+        document.getElementById('tipAmount').textContent = tipAmount.toFixed(2);
+        document.getElementById('totalAmount').textContent = totalAmount.toFixed(2);
+        document.getElementById('tipResult').style.display = 'block';
+    });
+       </script>
+
+<!-- Google Map Section -->
+    <div class="map">
+        <div class="my-5">
+            <h3 class="text-center">Find Us Here</h3>
+            <iframe 
+                id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345096826!2d144.9537353153161!3d-37.81627997975182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11e73f%3A0x5045675218ceed30!2sYour%20Business%20Name!5e0!3m2!1sen!2sus!4v1613146241448!5m2!1sen!2sus" 
+                frameborder="0" 
+                style="border:0;" 
+                allowfullscreen="" 
+                aria-hidden="false" 
+                tabindex="0">
+            </iframe>
+        </div>
+    </div>
+
+
+<!--Footer hare-->
+ <footer class="bg-dark text-white text-center p-4 mt-5">
+            <p>&copy; 2024 Azania Restaurant. All Rights Reserved.</p>
+            <a href="#" class="text-light me-3">Privacy Policy</a>
+            <a href="#" class="text-light">Terms of Service</a>
+            <div class="social-icons mt-2">
+                <a href="#" class="text-light me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+</div>
+<!--End of container class harer-->
+
+   <script src="script.js"></script>
+
+  </body>
+<!--End of body tag harer-->
+
+</html>
